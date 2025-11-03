@@ -1,0 +1,85 @@
+@import'variables';
+#timer-section{
+    background-color: $theme-color-primary;
+    width: 100%;
+    padding: 4em; 
+
+    .side-text{
+        color: $theme-background-color-alt;
+    }
+    h2{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+        font-family: $theme-Roboto-font;
+        font-size: 32px;
+    }
+    hr {
+        width: 200px; 
+    }
+
+    .timer{
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        width: 100px;
+        grid-gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative; 
+        left: 50%;
+        transform: translateX(-250px);
+
+        .timer-part{
+            background-color: $theme-color-primary-light;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 5px;
+            width: 100px;
+            height: 150px;
+            
+            span:first-child{
+                font-family: $theme-Space-Mono-font;
+                color: $theme-background-color;
+                margin-top: 10px;
+                font-size: 40px;
+                display:table;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            span{
+                font-family: $theme-Handlee-font;
+                color: $theme-background-color;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-size: 12px;
+                display:table;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            hr{
+                width: 99px; 
+                position: relative;
+                top: -50px;
+            } 
+        } 
+    }
+}
+
+
+@media (max-width:768px)  {
+    #timer-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10%;
+    }
+    #timer-section .timer{
+        
+        width: 100%;
+        display: flex;        
+    }
+    #timer-section .timer-part{
+        width: 50%;
+        margin: 5% 0;
+    }
+}

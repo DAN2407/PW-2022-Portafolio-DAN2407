@@ -1,0 +1,103 @@
+body{
+    background: #fff
+}
+
+/*ajustar el header de manera ordenada*/
+.container{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    background: #ececec;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+/*ajustar el logo*/
+.container .logo img{
+    width: 120px;
+    height: 50px;
+}
+
+.container .stuff {
+    list-style: circle;
+}
+
+.stuff > ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: circle;
+    padding-right: 100px;
+}
+
+.container .login{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login > button{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+}
+/*ajustar el main*/
+.textE{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr  ;
+    grid-template-rows: 0.5fr 0.1fr 0.1fr 0.5fr  ;
+    grid-template-areas: "text1 img2"
+                         "text2 img2"
+                         "btn1 img2"
+                         "img1 img2";
+    grid-gap: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.textE > h1{
+    font-size: 110px;
+    font-weight: 600;
+    color: #000;
+    grid-area: text1;
+}
+
+.textE > img{
+    width: 400px;
+    height: 50px;
+    grid-area: img1;
+}
+
+.textE > h3{
+    font-size: 50px;
+    font-weight: 300;
+    color: rgb(107, 107, 107);
+    grid-area: text2;
+}
+
+.textE > #prinT3 {
+    font-size: 30px;
+    font-weight: 200;
+    color: #000;
+    grid-area: btn1;
+}
+
+.textE > .ManLap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 800px;
+    height: 800px;
+    grid-area: img2;
+
+}
+
+#prinT3{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 250px;
+    height: 60px;
+}

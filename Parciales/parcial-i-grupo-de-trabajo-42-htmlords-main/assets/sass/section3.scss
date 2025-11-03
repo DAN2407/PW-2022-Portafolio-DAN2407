@@ -1,0 +1,121 @@
+@import'variables';
+#plans-section{
+    background-color: $theme-background-color-alt-dark;
+    width: 100%;
+    padding: 3em;  
+    font-family: $theme-Roboto-font;
+    font-size: 15px;
+    hr{
+        width: 200px;       
+    }
+    h2{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+        font-size: 40px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        article{
+            position: relative;
+            display: flex;
+            background-color: $theme-background-color;
+            border-radius: 20px;
+            margin: 5px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+            cursor: pointer;
+            overflow: hidden;
+            span{
+                color: $theme-heading-color;
+                margin-top: 2rem;
+                font-family: $theme-Montserrat-font;
+                font-size: 30px;
+            }
+            .plan-price-desc{
+                color: $theme-heading-color;
+                margin-top: 2rem;
+                font-family: $theme-Montserrat-font;
+                font-size: 15px;
+                margin: 25px;
+            }
+            h3{
+                color: $theme-heading-color;
+                text-align: center;
+                margin-top: 1rem;
+                line-height: 2;
+                font-size: 14px;
+                font-family: $theme-Roboto-font;
+            }
+            li{
+                color: $theme-heading-color;
+                text-align: center;
+                margin: 10px;
+                font-size: 13px;
+                list-style: none;
+            }
+            a{
+                background-color: $theme-background-color;
+                padding: 10px;
+                color: $theme-color-accent-dark;
+                border: 1px solid $theme-color-accent-dark;
+                font-family: $theme-Space-Mono-font;
+            } a:hover{
+                padding: 10px;
+                border: $theme-color-accent-dark 1px solid;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+        .plan-card.starred{
+            background-color: $theme-color-accent;
+            span{
+                color: $theme-background-color;
+                margin-top: 2rem;
+            }
+            h3{
+                color: $theme-background-color;
+                text-align: center;
+                margin-top: 1rem;
+                line-height: 2;
+                font-size: 14px;
+            }
+            li{
+                color: $theme-background-color;
+                text-align: center;
+                margin: 10px;
+                font-size: 13px;
+                list-style: none;
+            }
+            a{
+                background-color: $theme-color-accent-dark;
+                padding: 10px;
+                color: $theme-background-color;
+                border: 1px solid $theme-background-color;
+                
+            }
+            a:hover{
+                padding: 10px;
+                border: $theme-background-color 1px solid;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+
+    }
+
+}
+@media (max-width:1200px)  {
+    #plans-section .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:992px)  {
+    #plans-section .container{
+        grid-template-columns: repeat(1,2fr);
+    }
+}

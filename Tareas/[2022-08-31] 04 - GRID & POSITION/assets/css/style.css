@@ -1,0 +1,145 @@
+:root{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(170, 170, 170);
+    /*ajustar al centro de la pantalla*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.Card{
+    background-color: white;
+    width: 1000px;
+    height: 500px;
+    border-radius: 25% 25% 25% 25% / 25% 25% 25% 25%;
+    display: grid;
+    grid-template-rows: repeat(3, 2fr);
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-areas: "cubo1 .... cubo2"
+                         "....  .... ...."
+                         "cubo3 .... cubo4";
+}
+
+.TextC{
+    font-size: 30px;
+    font-weight: 300;
+    margin: 10px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.Card .TextC{
+    grid-row: 2/3;
+    grid-column: 2/2;
+    
+}
+
+.sharedCubes1{
+    display:grid;
+    grid-area: cubo1;
+    grid-template-rows: 40px 40px 40px;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-areas: "z1 z1 z2"
+                         "z4 z5 z2"
+                         "z4 z3 z3";
+    /*posicionamiento al final*/
+    justify-self: start;
+    align-self: start;
+}
+
+.sharedCubes2{
+    display:grid;
+    grid-area: cubo2;
+    rotate: 90deg;
+    grid-template-rows: 40px 40px 40px;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-areas: "z1 z1 z2"
+                         "z4 z5 z2"
+                         "z4 z3 z3";
+    justify-self: end;
+    align-self: start;
+}
+
+.sharedCubes3{
+    display:grid;
+    grid-area: cubo3;
+    rotate: 180deg;
+    grid-template-rows: 40px 40px 40px;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-areas: "z1 z1 z2"
+                         "z4 z5 z2"
+                         "z4 z3 z3";
+    justify-self: start;
+    align-self: end;
+}
+
+.sharedCubes4{
+    display:grid;
+    grid-area: cubo4;
+    rotate: 270deg;
+    grid-template-rows: 40px 40px 40px;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-areas: "z1 z1 z2"
+                         "z4 z5 z2"
+                         "z4 z3 z3";
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.item1{
+    background-color: #FF0000;
+    border-radius: 10px 0 0 0;
+    width: 80px;
+    height: 40px;
+    grid-area: z1;
+    cursor: pointer;
+}
+
+.item2{
+    background-color: #971677;
+    border-radius: 0 10px 0 0;
+    width: 40px;
+    height: 80px;
+    grid-area: z2;
+    cursor: pointer;
+}
+
+.item3{
+    background-color: #1bb0f5;
+    border-radius: 0 0 10px 0;
+    width: 80px;
+    height: 40px;
+    grid-area: z3;
+    cursor: pointer;
+}
+
+.item4{
+    background-color: #6f00ff;
+    border-radius: 0 0 0 10px;
+    width: 40px;
+    height: 80px;
+    grid-area: z4;
+    cursor: pointer;
+}
+
+.item5{
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px; 
+    grid-area: z5;
+    cursor: pointer;
+}
+
+

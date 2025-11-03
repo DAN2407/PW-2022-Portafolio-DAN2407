@@ -1,0 +1,316 @@
+:root{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: #eee;
+}
+
+section.header{
+    background-color: #333;
+    color: #fff;
+    padding: 23rem;
+    border-radius: 10px;
+}
+
+section.header h1{
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color:#eee;
+    display: flex;
+    justify-content: center;
+}
+
+/* buttons centrados en la pantalla*/
+section.header nav{
+    display: flex;
+    justify-content: center;
+    padding: 30px
+}
+
+nav a.boost{
+    background-color: #d1274b;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-right: 1rem;
+}
+
+nav a.boost:hover{
+    background-color: #fff;
+    color: #d1274b;
+}
+
+nav a.Deck{
+    background-color: #d1274b;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-right: 1rem;
+}
+
+nav a.Deck:hover{
+    background-color: #fff;
+    color: #d1274b;
+}
+
+
+section#BDRaft div.Title h2{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 3rem;
+    background-color: #d1274b;
+    color:#eee;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+section#Deck div.Title h2{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 3rem;
+    background-color: #d1274b;
+    color:#eee;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+section#BDRaft div.CardContainer{
+    flex: 1 0 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.CardContainer div.Card{
+    display: flex;
+    padding: 1rem;
+    max-width: 380px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+div.Card div.card-info p.card-type{
+    font-size: 0.75rem;
+    font-weight: 200;
+    margin: 1rem;
+}
+
+div.Card div.card-image img{
+    max-width: 350px;
+    height: 605px;
+    border-radius: 10px;
+}
+section#BDRaft div.ControlContainer{
+    /*color and format of the buttons*/
+    position: sticky;
+    margin-top: 2rem;
+    top: 0;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    background-color: #333;
+    width: 20%;
+    height: 100%;
+    border-radius: 50px;
+
+    flex: 1 0 20%;
+}
+
+div.ControlContainer .CC{
+    color: #eee;
+    display: flex;
+    justify-content: flex-start;
+}
+
+div.ControlContainer nav.CCbtn #btnGNB{
+    background-color: #d1274b;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-right: 1rem;
+}
+
+div.Card div.card-info h2 p{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1rem;
+    background-color: #d1274b;
+    color:#eee;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+div.ControlContainer nav.CCbtn #btnSAC{
+    background-color: #d1274b;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-right: 1rem;
+}
+
+div.ControlContainer nav.CCbtn #btnReset{
+    background-color: #d1274b;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-right: 1rem;
+}
+
+div.ControlContainer nav.CCbtn #btnGNB:hover{
+    background-color: #fff;
+    color: #d1274b;
+}
+
+div.ControlContainer nav.CCbtn #btnSAC:hover{
+    background-color: #fff;
+    color: #d1274b;
+}
+
+div.ControlContainer nav.CCbtn #btnReset:hover{
+    background-color: #fff;
+    color: #d1274b;
+}
+
+.ControlDeck{
+    position: sticky;   
+    top: 0; 
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px;
+    background-color: #333;
+    width: 20%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+div.DeckContainer {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding-left: 12rem;
+}
+div.DeckContainer div.Card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+div.DeckContainer div.Card div.card-image img{
+    width: 405px;
+    height: 605px;
+    border-radius: 10px;
+}
+
+.ControlDeck p.AC{
+    color: #eee;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ControlDeck nav.CDbtn #saveD{
+    background-color: #d1274b;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-right: 1rem;
+}
+
+.ControlDeck nav.CDbtn #loadD{
+    background-color: #d1274b;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-right: 1rem;
+}
+
+.ControlDeck nav.CDbtn #clearD{
+    background-color: #d1274b;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-right: 1rem;
+}
+
+.ControlDeck nav.CDbtn #saveD:hover{
+    background-color: #fff;
+    color: #d1274b;
+}
+
+.ControlDeck nav.CDbtn #loadD:hover{
+    background-color: #fff;
+    color: #d1274b;
+}
+
+.ControlDeck nav.CDbtn #clearD:hover{
+    background-color: #fff;
+    color: #d1274b;
+}
+
+/*Responsive for tablet*/
+@media screen and (max-width: 1024px) {
+    div.CardContainer div.Card {
+        width: 305px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    section#BDRaft div.ControlContainer{
+        flex: 1 0 30%;
+    }
+
+    section#BDRaft div.CardContainer{
+        flex: 1 0 65%;
+    }
+}
+
+/*Responsive for mobile*/
+@media screen and (max-width: 560px) {
+    section#BDRaft div.ControlContainer{
+        flex: 1 0 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+.container-draft{
+    display:flex;
+    flex-wrap: wrap;
+}

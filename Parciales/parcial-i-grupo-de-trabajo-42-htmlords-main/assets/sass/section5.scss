@@ -1,0 +1,197 @@
+@import 'variables';
+
+#tweets-section {
+    background-color: $theme-background-color-alt-dark;
+    font-family: $theme-Montserrat-font;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+article.side-text {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.side-text > hr{
+    width: 30%;
+}
+
+.side-text > h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 32pt;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+article.tweet-card {
+    font-size: 9pt;
+    padding: 0.5rem 2rem;
+    flex: 1 0 350px;
+    min-width: 325px;
+    max-width: 325px;
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    border: 1px solid $theme-background-color;
+    border-radius: 1rem;
+
+    border-top: 0.5rem solid $theme-color-accent;
+
+    box-shadow: 0 0 0.1rem $theme-heading-color;
+
+    background-color: $theme-background-color;
+    font-family: $theme-Roboto-font;
+
+    &:hover {
+        transform: scale(1.07);
+        transition: all 0.5s;
+    }
+}
+
+article.tweet-card > div.user-info {
+    display: flex;
+    justify-content: flex-end;
+}
+
+article.tweet-card > div.user-info > div.user-data{
+    text-align: justify;
+    font-size: 10pt;
+    margin: 0.2rem 0;
+    display: inline-block;
+}
+article.tweet-card > div.user-info > figure {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid $theme-background-color;
+    border-radius: 1rem;
+}
+
+article.tweet-card > div.user-info > figure > img {
+    border-radius: 150px;
+}
+
+article.tweet-card > p{
+    text-align: justify;
+    font-size: 10 pt;
+    margin: 0.25rem 0;
+    font-size: 10pt;
+    line-height: 1.3rem;
+    overflow-y: auto;
+    max-height: 250px;
+    min-height: 250px;
+}
+
+
+#tweets-section > div#join-us-form {
+    background-color: $theme-color-primary;
+    margin: 3rem 25%;
+    padding: 2rem;
+    border: 1px solid $theme-color-primary;
+    border-radius: 1rem;
+    color: #fff;
+    overflow-x: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#tweets-section > div#join-us-form > h3{
+    font-family: $theme-Handlee-font;
+    font-size: 18pt;
+    padding-bottom: 1rem;
+
+}
+
+#tweets-section > div#join-us-form > p{
+    font-family: $theme-Roboto-font;
+    font-size: 10pt;
+    padding-bottom: 1rem;
+    line-height: 1.3rem;
+    display: flex;
+}
+
+#tweets-section > div#join-us-form > div.join-us-input-container{
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+
+#tweets-section > div#join-us-form > div.join-us-input-container > input{
+    padding: 0.5rem;
+    width: 70%;
+    font-size: 8pt;
+    &:hover {
+        border: 1px solid $theme-color-accent;
+        transition: all 0.2s;
+    }
+}
+
+#tweets-section > div#join-us-form > div.join-us-input-container > .btn.light{
+    padding: 0.5rem;
+    margin-left: 2%;
+    width: 28%;
+    color: $theme-text-color-alt;
+    background-color: $theme-color-primary;
+    border: 1px solid $theme-background-color;
+
+    &:hover {
+        border-radius: 1rem 0;
+        transition: all 0.5s;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #tweets-section > div#join-us-form {
+        background-color: $theme-color-primary;
+        margin: 3rem 0%;
+        width: 100%;
+        padding: 2rem;
+        border: 1px solid $theme-color-primary;
+        border-radius: 1rem;
+        color: #fff;
+        overflow-x: auto;
+        justify-content: center;
+        align-items: center;
+    } 
+}
+
+@media only screen and (max-width:500px) {
+    #tweets-section > div#join-us-form > div.join-us-input-container{
+        flex-direction: column;
+        text-align: justify;
+
+    }
+
+    #tweets-section > div#join-us-form > div.join-us-input-container > input{
+        padding: 0.5rem;
+        width: 100%;
+        font-size: 8pt;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+    #tweets-section > div#join-us-form > div.join-us-input-container > .btn.light{
+        padding: 1rem;
+        width: 80%;
+        justify-content: center;
+    }
+
+}
