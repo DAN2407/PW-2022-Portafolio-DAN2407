@@ -81,10 +81,10 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Document
 
 Usamos github releases para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/Programacion-Web-02-2022/proyecto-grupo-de-trabajo-42-htmlords/releases).
 
-## Autores ✒️
+## Autores del proyecto original ✒️
 
 * **Bryan Amaya** - *Desarrollo back-end* - [BryanZoldyckDev](https://github.com/BryanZoldyckDev)
-* **Dann Brann** - *Desarrollo front-end* - [DAN2407](https://github.com/DAN2407)
+* **Danny Brann** - *Desarrollo front-end* - [DAN2407](https://github.com/DAN2407)
 * **Diego Cruz** - *Desarollo front-end* - [DiegoCruch](https://github.com/DiegoCruch)
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/Programacion-Web-02-2022/proyecto-grupo-de-trabajo-42-htmlords/tree/main) quíenes han participado en este proyecto. 
