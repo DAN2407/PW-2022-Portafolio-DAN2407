@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuthStore, useForm } from '../../../utils/hooks/index.js';
-import { useEffect } from 'react';
 import Swal from 'sweetalert2';
 import { BACK_ROLES, ROLES } from '../../../utils/constants/index.js';
 
@@ -21,6 +20,9 @@ const registerFormFields = {
 const RegisterForm = () => {
   const navigate = useNavigate();
   const location = useLocation().pathname.split('/')[2];
+
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
   
   const calendarKeyDown = (e) => {
     e.preventDefault();
@@ -211,24 +213,50 @@ const RegisterForm = () => {
           <div className="flex flex-row mt-2">
             <div id="firstName" className="w-1/2 mr-1">
               <label className="mt-2 text-sm">Contraseña</label><br/>
-              <input
-                name="registerPassword"
-                value={ registerPassword }
-                onChange={ onRegisterInputChange }
-                type="password"
-                id="password"
-                required="required"
-                className="h-10 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-green-600 shadow-sm"/>
+              <div className="relative">
+                <input
+                  name="registerPassword"
+                  value={ registerPassword }
+                  onChange={ onRegisterInputChange }
+                  type={ showPassword ? "text" : "password" }
+                  id="password"
+                  required="required"
+                  className="h-10 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-green-600 shadow-sm pr-10"/>
+                <button
+                  type="button"
+                  aria-label={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+                  onClick={() => setShowPassword(v => !v)}
+                  className="absolute right-2 top-2 text-slate-600 p-1"
+                >
+                  {showPassword
+                    ? <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19.5c-5.523 0-10-4.477-10-10 0-1.085.173-2.13.49-3.107M3 3l18 18" /></svg>
+                    : <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                  }
+                </button>
+              </div>
             </div>
             <div id="lastName" className="w-1/2 mr-1">
               <label className="mt-2 text-sm">Confirmar contraseña</label><br/>
-              <input
-                name="confirmPassword"
-                value={ confirmPassword }
-                onChange={ onRegisterInputChange }
-                type="password"
-                id="confirmPassword"
-                className="h-10 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-green-600 shadow-sm"/>
+              <div className="relative">
+                <input
+                  name="confirmPassword"
+                  value={ confirmPassword }
+                  onChange={ onRegisterInputChange }
+                  type={ showConfirm ? "text" : "password" }
+                  id="confirmPassword"
+                  className="h-10 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-green-600 shadow-sm pr-10"/>
+                <button
+                  type="button"
+                  aria-label={showConfirm ? "Ocultar confirmación" : "Mostrar confirmación"}
+                  onClick={() => setShowConfirm(v => !v)}
+                  className="absolute right-2 top-2 text-slate-600 p-1"
+                >
+                  {showConfirm
+                    ? <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19.5c-5.523 0-10-4.477-10-10 0-1.085.173-2.13.49-3.107M3 3l18 18" /></svg>
+                    : <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                  }
+                </button>
+              </div>
             </div>
           </div>
 
