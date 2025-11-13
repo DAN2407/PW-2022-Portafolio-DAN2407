@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus, faPen, faTrash, faBoxArchive, faSearch, faFilter } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
+//revisar lo de los llamados de API 
 const initialArchived = [
   {
     id: 101,
